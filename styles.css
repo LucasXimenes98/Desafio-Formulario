@@ -1,0 +1,125 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos do Formulário */
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+label {
+    grid-column: 1;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+input[type="number"] {
+    grid-column: span 2;
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #d9d3d3;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    grid-column: span 3;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.warning {
+    grid-column: span 3;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Ícone */
+.gg-calendar-dates {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 3));
+    width: 30px;
+    height: 30px;
+    border: 3px solid;
+    border-radius: 3px;
+}
+
+.gg-calendar-dates::after,
+.gg-calendar-dates::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 5px;
+    height: 2px;
+    left: 2px;
+}
+
+.gg-calendar-dates::before {
+    background: currentColor;
+    width: 4px;
+    box-shadow: 4px 0 0, 8px 0 0, 0 4px 0, 4px 4px 0, 8px 4px 0;
+    top: 15px;
+}
+
+.gg-calendar-dates::after {
+    width: 20px;
+    top: -4px;
+    box-shadow: 0 8px 0 0;
+}
+
+/* Opções de Status */
+select[name="status"] option[value="Pendente"] {
+    background-color: #f00707c3;
+}
+
+select[name="status"] option[value="Solicitando"] {
+    background-color: #07f00fc3;
+}
+
+/* Classe de Status */
+.status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 14px;
+    gap: 8px;
+    width: 300px;
+    height: 56px;
+    background: rgba(255, 0, 0, 0.0);
+    border-radius: 8px;
+    border: none;
+}

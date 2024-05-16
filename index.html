@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulário de Férias</title>
+</head>
+<body>
+    <form action="#">
+        <h1>SOLICITAÇÃO DE FÉRIAS</h1>
+        <label for="colaborador">Colaborador:</label>
+        <input type="text" id="colaborador" name="colaborador">
+
+        <label for="data">Data:</label>
+        <input type="date" id="data_entrada" name="data_entrada" placeholder="Data de Entrada">
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" class="status">
+            <option value="Solicitando">Solicitando</option>
+            <option value="Pendente">Pendente</option>
+        </select>
+
+        <label for="departamento">Departamento:</label>
+        <input type="text" id="departamento" name="departamento">
+
+        <label for="centro_custo">Centro de Custo:</label>
+        <input type="text" id="centro_custo" name="centro_custo">
+
+        <label for="unidade_negocio">Unidade de Negócio:</label>
+        <input type="text" id="unidade_negocio" name="unidade_negocio">
+
+        <label for="periodo_aquisitivo_inicio">Período Aquisitivo (Início):</label>
+        <input type="date" id="periodo_aquisitivo_inicio" name="periodo_aquisitivo_inicio">
+
+        <label for="periodo_aquisitivo_fim">Período Aquisitivo (Fim):</label>
+        <input type="date" id="periodo_aquisitivo_fim" name="periodo_aquisitivo_fim">
+
+        <label for="dias_saldo">Dias de Saldo:</label>
+        <input type="number" id="dias_saldo" name="dias_saldo" min="0">
+
+        <label for="limite">Limite:</label>
+        <input type="date" id="limite" name="limite">
+
+        <label for="inicio_ferias">Início das Férias:</label>
+        <input type="date" id="inicio_ferias" name="inicio_ferias">
+
+        <label for="final_ferias">Final das Férias:</label>
+        <input type="date" id="final_ferias" name="final_ferias">
+
+        <label for="abono">Abono:</label>
+        <select id="abono" name="abono">
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+
+        <label for="decimo_terceiro">1° PARC. DO 13° SALÁRIO:</label>
+        <select id="decimo_terceiro" name="decimo_terceiro">
+            <option value="SIM">SIM</option>
+            <option value="nao">Não</option>
+        </select>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
